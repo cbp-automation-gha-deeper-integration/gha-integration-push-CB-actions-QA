@@ -21,7 +21,7 @@ on:
         required: false
 jobs:
   deploy:
-    # environment: ${{ inputs.environment }}
+    environment: "${{ inputs.environment }}"
     steps:
       - name: Inform system that an artifact version was deployed
         kind: deploy
@@ -29,6 +29,6 @@ jobs:
         with:
           name: "${{ inputs.artifactName }}"
           version: "${{ inputs.artifactVersion }}"
-          url: "docker.io/SampleApp/${{ inputs.artifactName }}:${{ inputs.artifactVersion }}"
+          # url: "docker.io/SampleApp/${{ inputs.artifactName }}:${{ inputs.artifactVersion }}"
           target-environment: "${{ inputs.environment }}"
           
