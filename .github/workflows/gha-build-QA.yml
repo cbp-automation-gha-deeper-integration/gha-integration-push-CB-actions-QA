@@ -25,7 +25,7 @@ jobs:
         run: echo "Pushing Binary to ECR..."
 
       - name: Register Build Artifacts in Cloudbees Platform
-        uses: cloudbees-io-gha/register-build-artifact@v1
+        uses: cloudbees-io-gha/register-build-artifact@v2
         id: go-action
         with:
           name: "Automation test for Register-Artifacts"
