@@ -19,6 +19,9 @@ on:
       digest:
         type: string
         required: false
+      artifactId:
+        type: string
+        required: false
 jobs:
   deploy:
     # environment: "${{ inputs.environment }}"
@@ -27,8 +30,5 @@ jobs:
         kind: deploy
         uses: cloudbees-io/register-deployed-artifact@v2
         with:
-          name: "${{ inputs.artifactName }}"
-          version: "${{ inputs.artifactVersion }}"
-          url: "docker.io/SampleApp/${{ inputs.artifactName }}:${{ inputs.artifactVersion }}"
+          artifact-id: "${{ inputs.artifactId }}"
           target-environment: "${{ inputs.environment }}"
-          
