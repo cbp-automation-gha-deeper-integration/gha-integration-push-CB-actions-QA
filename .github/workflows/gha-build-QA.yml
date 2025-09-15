@@ -101,4 +101,4 @@ jobs:
           workflow-inputs: '{"artifactName": "SampleApp-Backend-15","artifactVersion": "${{ env.artifact_version }}", "environment": "QA", "artifactId" : "${{needs.build.outputs.artifactId}}"}'
 
       - name: Use runUrl output
-        run: echo "The CloudBees run URL is ${{ steps.deploy.outputs.cbp_run_url}}"
+        run: echo "The CloudBees run URL is ${{ steps.deploy.outputs.cbp_run_url }}"
