@@ -96,6 +96,7 @@ jobs:
         with :
           cloudbees-url: "https://api.saas-qa.beescloud.com"
           cloudbees-pat: ${{ secrets.CBP_PAT_QA }}
+          branch-name: "main"
           workflow-file-name: "cbp-deploy.yaml"
           workflow-inputs: '{"artifactName": "SampleApp-Backend-15","artifactVersion": "${{ env.artifact_version }}", "environment": "QA", "artifactId" : "${{needs.build.outputs.artifactId}}"}'
 
